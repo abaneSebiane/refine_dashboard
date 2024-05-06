@@ -79,7 +79,7 @@ export const CompanyList = ({ children }: React.PropsWithChildren) => {
             ...tableProps.pagination,
           }}
         >
-          <Table.Column
+          <Table.Column<Company>
             dataIndex="name"
             title="Company Title"
             defaultFilteredValue={getDefaultFilter('id', filters)} 
@@ -98,7 +98,7 @@ export const CompanyList = ({ children }: React.PropsWithChildren) => {
               </Space>
             )}
           />
-          <Table.Column
+          <Table.Column<Company>
             dataIndex="totalRevenue"
             title="Open deals amout"
             render={(value, company) => (
@@ -107,7 +107,7 @@ export const CompanyList = ({ children }: React.PropsWithChildren) => {
               </Text>
             )}
           />
-          <Table.Column
+          <Table.Column<Company>
             dataIndex="id"
             title="Actions"
             fixed="right"
